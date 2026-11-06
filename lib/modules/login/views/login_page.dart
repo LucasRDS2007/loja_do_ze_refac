@@ -4,7 +4,8 @@ import 'package:loja_do_ze/main.dart';
 import 'package:loja_do_ze/modules/home/views/home_view.dart';
 import 'package:loja_do_ze/shared/Utils.dart';
 import 'package:loja_do_ze/shared/app_colors.dart';
-import 'package:loja_do_ze/shared/app_elevated_button.dart';
+import 'package:loja_do_ze/shared/app_text_style.dart';
+import 'package:loja_do_ze/shared/widgets/app_elevated_button.dart';
 
 class LoginPage extends StatefulWidget {
   @override

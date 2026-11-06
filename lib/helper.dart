@@ -18,8 +18,6 @@ class Helper {
   Future<List<Produto>?> getProdutos() async {
     try {
       await Future.delayed(Duration(seconds: 2));
-      // simula a api caindo as vezes
-      // if (Random().nextInt(10) == 7) throw Exception("erro");
       var json = '''
       [
         {"id": 1, "nome": "Camiseta Dev", "preco": 59.9, "categoria": "roupas", "estoque": 10, "imagem": "", "promo": false},
@@ -54,7 +52,6 @@ class Helper {
     return false;
   }
 
-  // calcula
   double calcula(List<Produto> l, bool c, bool f, String? uf) {
     double t = 0;
     for (var p in l) {
@@ -110,7 +107,6 @@ class Helper {
     ));
   }
 
-  // TODO: arrumar isso depois (2019)
   int validaTudo(String nome, String email, String cpf) {
     if (nome == "") return -1;
     if (!Utils.valida(email, 1)) return -2;
