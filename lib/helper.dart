@@ -2,9 +2,9 @@ import 'dart:math';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'models/produto.dart';
+import 'modules/home/models/produto.dart';
 import 'globals.dart';
-import 'Utils.dart';
+import 'shared/utils.dart';
 
 // classe que faz as coisas
 class Helper {
@@ -19,15 +19,15 @@ class Helper {
     try {
       await Future.delayed(Duration(seconds: 2));
       // simula a api caindo as vezes
-      if (Random().nextInt(10) == 7) throw Exception("erro");
+      // if (Random().nextInt(10) == 7) throw Exception("erro");
       var json = '''
       [
         {"id": 1, "nome": "Camiseta Dev", "preco": 59.9, "categoria": "roupas", "estoque": 10, "imagem": "", "promo": false},
-        {"id": 2, "nome": "Caneca Flutter", "preco": 35, "categoria": "casa", "estoque": 3, "imagem": "", "promo": true},
-        {"id": "3", "nome": "Moletom Dart", "preco": 189.9, "categoria": "roupas", "estoque": 0, "imagem": "", "promo": false, "status": "esgotado"},
+        {"id": 2, "nome": "Caneca Flutter", "preco": 35.0, "categoria": "casa", "estoque": 3, "imagem": "", "promo": true},
+        {"id": 3, "nome": "Moletom Dart", "preco": 189.9, "categoria": "roupas", "estoque": 0, "imagem": "", "promo": false, "status": "esgotado"},
         {"id": 4, "nome": "Adesivo Widget", "preco": 9.9, "categoria": "acessorios", "estoque": 100, "imagem": "", "promo": true},
-        {"id": 5, "nome": "Mousepad Clean Code", "preco": 79.9, "categoria": "acessorios", "estoque": 4, "imagem": "", "promo": false, "status": "ATIVO"},
-        {"id": 6, "nome": "Almofada Hot Reload", "preco": 120, "categoria": "casa", "estoque": 7, "imagem": "", "promo": true},
+        {"id": 5, "nome": "Mousepad Clean Code", "preco": 79.9, "categoria": "acessorios", "estoque": 4, "imagem": "", "promo": false, "status": "ativo"},
+        {"id": 6, "nome": "Almofada Hot Reload", "preco": 120.0, "categoria": "casa", "estoque": 7, "imagem": "", "promo": true},
         {"id": 7, "nome": "Bone Null Safety", "preco": 49.9, "categoria": "roupas", "estoque": 2, "imagem": "", "promo": false, "status": "inativo"}
       ]
       ''';
